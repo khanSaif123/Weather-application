@@ -1,0 +1,192 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    /* use a tool set your gradient name angry tool */
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+}
+.tab-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+}
+.tab{
+    cursor: pointer;
+    letter-spacing: 1.75px;
+    font-size: 0.875rem;
+    padding: 6px 8px;
+}
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 3px;
+}
+.weather-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn{
+    all: unset;
+    font-size: 0.85rem;
+    padding: 10px 30px;
+    background-color: var(--colorDark2);
+    border-radius: 4px;
+    color: var(--colorLight2);
+}
+.subContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+}
+.grant-location-container img{
+   margin-bottom:2rem ;
+}
+.grant-location-container{
+    display: none;
+}
+.grant-location-container.active{
+   display: flex;
+}
+.grant-location-container p:first-of-type{
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.grant-location-container p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+.loading-container{
+    display: none;
+}
+.loading-container.active{
+    display: flex;
+}
+.loading-container p{
+    text-transform: uppercase;
+}
+.user-info-container{
+    display: none;
+}
+.user-info-container.active{
+    display: flex;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.name img{
+  width: 30px;
+  height: 30px;
+}
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.weatherImg{
+    width: 90px;
+    height: 90px;
+}
+.user-info-container p[data-temp]{
+    font-size: 2.75rem;
+}
+.parameter-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.parameter{
+    width:30%;
+    max-width:200px;
+    background-color: rgba(219, 226, 239, 0.5);;
+    border-radius: 5px;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    gap:5px 0;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+/* here */
+.parameter img{
+    width:50px;
+    height:50px;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight:600;
+    text-transform: uppercase;
+}
+
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+}
+.form-container{
+    display: none;
+    padding-top: 50px;
+}
+.form-container.active{
+    display: flex;
+    gap: 10px;
+}
+.form-container input{
+    height: 40px;
+    width: 400px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border: none;
+    border-radius: 10px;
+    color: var(--colorLight1);
+}
+.form-container input::placeholder{
+  color: var(--colorLight1);
+}
+/* for white out */
+.form-container .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: unset;
+    height: 40px;
+    width:40px;
+    border-radius: 100px;
+}
